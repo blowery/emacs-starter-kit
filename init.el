@@ -17,8 +17,10 @@
                     (or (buffer-file-name) load-file-name)))
 
 (add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
+
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
@@ -36,7 +38,7 @@
 
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
-(load "elpa-to-submit/nxhtml/autostart")
+;;(load "elpa-to-submit/nxhtml/autostart")
 
 ;; Load up ELPA, the package manager
 
@@ -55,6 +57,9 @@
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+
+(require 'weblogger)
+(require 'eshell-vc)
 
 (regen-autoloads)
 (load custom-file 'noerror)

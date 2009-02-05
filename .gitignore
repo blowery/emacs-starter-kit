@@ -13,3 +13,4 @@ oddmuse/*
 /#.newsrc-dribble#
 .svn
 .DS_Store
+init.el~

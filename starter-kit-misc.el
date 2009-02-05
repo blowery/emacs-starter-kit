@@ -13,7 +13,7 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(setq visible-bell t
+(setq visible-bell nil
       font-lock-maximum-decoration t
       inhibit-startup-message t
       transient-mark-mode t

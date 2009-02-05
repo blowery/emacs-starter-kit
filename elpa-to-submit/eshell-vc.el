@@ -42,7 +42,7 @@
 ;;; Code:
 
 (defvar eshell-vc-dirty
-  " ⚠ " "String to use for the prompt when there are uncomitted checkins.")
+  " (D) " "String to use for the prompt when there are uncomitted checkins.")
 
 (defun eshell-vc-prompt ()
   "Return a prompt with VC branch and dirty state."
