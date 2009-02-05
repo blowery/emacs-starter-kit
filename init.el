@@ -22,6 +22,12 @@
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
 
+;; Source my .bash_profile to pick up the proper environment
+(if window-system
+    (ns-grabenv "/bin/bash" '("source ~/.bash_profile" "printenv")))
+
+
+
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session
 
