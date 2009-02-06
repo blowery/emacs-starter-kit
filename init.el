@@ -18,6 +18,8 @@
 
 (add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/color-theme-6.6.0"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 
@@ -35,6 +37,7 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'color-theme')
 
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
@@ -57,6 +60,7 @@
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+(require 'starter-kit-org)
 
 (require 'weblogger)
 (require 'eshell-vc)
