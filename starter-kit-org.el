@@ -8,4 +8,8 @@
 (add-hook 'org-mode-hook 'turn-on-font-lock)  ; Org buffers only
 (setq org-log-done t)
 
+(setq org-completion-use-ido t)
+(setq org-hide-leading-stars t)
+(setq org-agenda-files (file-expand-wildcards "~/todo/*.org"))
+
 (provide 'starter-kit-org)
