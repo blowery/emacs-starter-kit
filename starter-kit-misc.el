@@ -24,7 +24,7 @@
       uniquify-buffer-name-style 'forward
       whitespace-style '(trailing lines space-before-tab
                                   indentation space-after-tab)
-      whitespace-line-column 100
+      whitespace-line-column 120
       ediff-window-setup-function 'ediff-setup-windows-plain
       oddmuse-directory (concat dotfiles-dir "oddmuse")
       xterm-mouse-mode t
@@ -47,7 +47,7 @@
 (global-font-lock-mode t)
 
 ;; You really don't need this; trust me.
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 
 ;; Save a list of recent files visited.
 (recentf-mode 1)
@@ -62,7 +62,7 @@
         ido-enable-flex-matching t
         ido-create-new-buffer 'always
         ido-use-filename-at-point t
-        ido-max-prospects 10))
+        ido-max-prospects 8))
 
 (set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines t)
