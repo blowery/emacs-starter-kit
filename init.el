@@ -20,8 +20,9 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme-6.6.0"))
+(add-to-list 'load-path (concat dotfiles-dir "/themes"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
-(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
+;;(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
@@ -38,6 +39,7 @@
 (require 'ansi-color)
 (require 'recentf)
 (require 'color-theme)
+(color-theme-initialize)
 
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
@@ -64,13 +66,16 @@
 
 (require 'weblogger)
 (require 'eshell-vc)
+(require 'erc)
+(require 'erc-highlight-nicknames)
+(setq erc-autojoin-channels-alist '("freenode.net" "#emacs" "#bloglines" "#dojo" "#joost"))
 
 (regen-autoloads)
 (load custom-file 'noerror)
 
 ;; More complicated packages that haven't made it into ELPA yet
 
-(autoload 'jabber-connect "jabber" "" t)
+;;(autoload 'jabber-connect "jabber" "" t)
 ;; TODO: rinari, slime
 
 ;; Work around a bug on OS X where system-name is FQDN
