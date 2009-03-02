@@ -161,8 +161,8 @@ and setting up the inferior-mozilla buffer."
     (run-hooks 'inferior-moz-hook)))
 
 ;;;###autoload
-(eval-after-load 'js2-mode
-  '(add-hook 'js2-mode-hook 'moz-minor-mode))
+;;(eval-after-load 'js2-mode
+;;  '(add-hook 'js2-mode-hook 'moz-minor-mode))
 
 (provide 'moz)
 
