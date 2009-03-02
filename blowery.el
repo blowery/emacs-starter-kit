@@ -1,1 +1,2 @@
-(color-theme-blackboard)
+(require 'color-theme-wombat)
+(color-theme-wombat)
