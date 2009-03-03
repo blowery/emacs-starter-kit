@@ -19,6 +19,7 @@
 (add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/contrib/lisp"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme-6.6.0"))
 (add-to-list 'load-path (concat dotfiles-dir "/themes"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
