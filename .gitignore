@@ -14,3 +14,7 @@ oddmuse/*
 .svn
 .DS_Store
 init.el~
+.org-id-locations
+byte-code-cache.el
+org-clock-save.el
+tramp

@@ -41,13 +41,13 @@
      (font-lock-regexp-grouping-backslash ((t (:foreground "#E9C062"))))
      (font-lock-regexp-grouping-construct ((t (:foreground "red"))))
 
-     (font-lock-string-face ((t (:foreground "#95e454" :italic t))))
+     (font-lock-string-face ((t (:foreground "#95e454"))))
      (font-lock-type-face ((t (:foreground "#cae682"))))
      
      (font-lock-warning-face ((t (:bold t :foreground "yellow"))))
 
      ;;(gui-element ((t (:background "#D4D0C8" :foreground "black"))))
-     ;;(region ((t (:background "#253B76"))))
+     (region ((t (:background "#435869"))))
      (mode-line ((t (:background "#161616" :foreground "white"))))
      (highlight ((t (:background "#222222"))))
      ;;(highline-face ((t (:background "#777777"))))

@@ -6,9 +6,14 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (org-remember-insinuate)
-(setq org-directory "~/todo/")
-(setq org-default-notes-file (concat org-directory "/joost.org"))
+(setq org-directory "~/notes/")
+(setq org-default-notes-file (concat org-directory "/remember.org"))
 (define-key global-map "\C-cr" 'org-remember)
+
+(setq org-remember-templates
+      '(("Todo" ?t "* TODO %?\n %i\n %a" "~/notes/remember.org" "Tasks")
+        ("Bug" ?b "* TODO %?\n %i\n %a" "~/notes/joost.org" "Bugs")
+        ("Idea" ?i "* %^{Title}\n %i\n %a" "~/notes/remember.org" "New Ideas")))
 
 ;; make the clock persist across invocations of emacs
 (setq org-clock-persist t)
@@ -19,7 +24,7 @@
 
 (setq org-completion-use-ido t)
 (setq org-hide-leading-stars t)
-(setq org-agenda-files (file-expand-wildcards "~/todo/*.org"))
+(setq org-agenda-files (file-expand-wildcards "~/notes/*.org"))
 (setq org-link-abbrev-alist
       '(("MWF" . "https://intranet.joost.com/bugs/browse/MWF-")
         ("PRJ" . "https://intranet.joost.com/bugs/browse/PRJ-")
@@ -34,5 +39,10 @@
 (setq org-icalendar-store-UID t)
 (setq org-combined-agenda-icalendar-file "~/Sites/org.ics")
 
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STALLED(s)" "|" "DONE(d)" "DELEGATED(g)")
+        (sequence "MAYBE(m)" "|" "YES(y)" "NO(n)")
+        (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")))
 
 (provide 'starter-kit-org)

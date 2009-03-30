@@ -41,6 +41,8 @@
 (require 'recentf)
 (require 'color-theme)
 (color-theme-initialize)
+(require 'color-theme-wombat)
+(color-theme-wombat)
 
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
@@ -83,6 +85,9 @@
 (if (eq system-type 'darwin)
     (setq system-name (car (split-string system-name "\\."))))
 
+(if (eq system-type 'darwin)
+    (normal-erase-is-backspace-mode 1))
+
 ;; You can keep system- or user-specific customizations here
 (setq system-specific-config (concat dotfiles-dir system-name ".el")
       user-specific-config (concat dotfiles-dir user-login-name ".el")
@@ -93,5 +98,8 @@
 (if (file-exists-p user-specific-config) (load user-specific-config))
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+
+;; fire up the server so emacsclient can work
+(server-start)
 
 ;;; init.el ends here
