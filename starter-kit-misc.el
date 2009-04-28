@@ -68,15 +68,13 @@
 (set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
 
-<<<<<<< HEAD:starter-kit-misc.el
 ;;(add-hook 'text-mode-hook 'auto-fill-mode)
 ;;(add-hook 'text-mode-hook 'flyspell-mode)
 ;;(add-hook 'textile-mode-hook 'auto-fill-mode)
 ;;(add-hook 'textile-mode-hook 'flyspell-mode)
-=======
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-flyspell)
->>>>>>> technomancy/master:starter-kit-misc.el
+;;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;;(add-hook 'text-mode-hook 'turn-on-flyspell)
+
 
 (defvar coding-hook nil
   "Hook that gets run on activation of any programming mode.")
