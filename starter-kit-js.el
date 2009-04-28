@@ -2,7 +2,12 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
-(autoload 'js2-mode "js2" nil t)
+;;(autoload 'js2-mode "js2" nil t)
+(autoload 'js2-mode "js2-mode" "\
+Major mode for editing JavaScript code.
+
+\(fn)" t nil)
+
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 
@@ -16,10 +21,10 @@
      ;;                                         "ƒ")
      ;;                         nil)))))
 
-     (font-lock-add-keywords
-      'js2-mode
-      '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
-         1 font-lock-warning-face t)))
+;     (font-lock-add-keywords
+;      'js2-mode
+;      '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
+;         1 font-lock-warning-face t)))
 
      (defun js-lambda () (interactive) (insert "function () {\n}")
        (backward-char 5))
@@ -29,7 +34,7 @@
      (define-key js2-mode-map (kbd "C-c l") 'js-lambda)
      (define-key js2-mode-map "\C-\M-h" 'backward-kill-word)
 
-     Fix js2's crazy indentation
+;;     Fix js2's crazy indentation
      (define-key js2-mode-map (kbd "TAB") (lambda () (interactive)
                                             (indent-for-tab-command)
                                             (back-to-indentation)))
@@ -51,7 +56,7 @@
        "Return the proper indentation for the current line."
        (save-excursion
          (back-to-indentation)
-         (let ((ctrl-stmt-indent (js-ctrl-statement-indentatidon))
+         (let ((ctrl-stmt-indent (js-ctrl-statement-indentation))
                (same-indent-p (looking-at "[]})]\\|\\<case\\>\\|\\<default\\>"))
                (continued-expr-p (js-continued-expression-p)))
            (cond (ctrl-stmt-indent)
@@ -76,8 +81,9 @@
                       (skip-chars-forward " \t"))
                     (current-column)))
                  (continued-expr-p js2-basic-offset)
-                 (t 0)))))))
-))
+                 (t 0)))))
+     ))
+
 (defun esk-pp-json ()
   "Pretty-print the json object following point."
   (interactive)
