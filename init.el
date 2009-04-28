@@ -67,11 +67,16 @@
 (require 'starter-kit-js)
 (require 'starter-kit-org)
 
-(require 'weblogger)
+;(require 'weblogger)
 (require 'eshell-vc)
-(require 'erc)
-(require 'erc-highlight-nicknames)
-(setq erc-autojoin-channels-alist '("freenode.net" "#emacs" "#bloglines" "#dojo" "#joost"))
+;(require 'erc)
+;(require 'erc-highlight-nicknames)
+;(setq erc-autojoin-channels-alist '("freenode.net" "#emacs" "#bloglines" "#dojo" "#joost"))
+
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
 
 (regen-autoloads)
 (load custom-file 'noerror)

@@ -19,13 +19,9 @@
      ((background-color . "#111111")
       (background-mode . dark)
       (border-color . "black")
-      (cursor-color . "darkgreen")
-      (foreground-color . "#f6f3e8")
-      (mouse-color . "sienna1"))
+      (cursor-color . "SteelBlue")
+      (foreground-color . "#f6f3e8"))
      (default ((t (:background "#242424" :foreground "#f6f3e8"))))
-     (blue ((t (:foreground "blue"))))
-     (bold ((t (:bold t))))
-     (bold-italic ((t (:bold t))))
      (border-glyph ((t (nil))))
      (buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
      (font-lock-builtin-face ((t (:foreground "#f6f3e8"))))
@@ -46,6 +42,10 @@
      
      (font-lock-warning-face ((t (:bold t :foreground "yellow"))))
 
+     (js2-error-face ((t (:background "firebrick4"))))
+     (js2-warning-face ((t (:background "gray20"))))
+     (js2-external-variable-face ((t (:foreground "red" :bold t))))
+     
      ;;(gui-element ((t (:background "#D4D0C8" :foreground "black"))))
      (region ((t (:background "#435869"))))
      (mode-line ((t (:background "#161616" :foreground "white"))))
