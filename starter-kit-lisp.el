@@ -28,7 +28,7 @@
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'run-coding-hook)
 (add-hook 'emacs-lisp-mode-hook 'esk-remove-elc-on-save)
-(add-hook 'emacs-lisp-mode-hook 'idle-highlight)
+;;(add-hook 'emacs-lisp-mode-hook 'idle-highlight)
 
 (defun esk-remove-elc-on-save ()
   "If you're saving an elisp file, likely the .elc is no longer valid."
@@ -44,7 +44,7 @@
 ;;; Clojure
 
 (add-hook 'clojure-mode-hook 'run-coding-hook)
-(add-hook 'clojure-mode-hook 'idle-highlight)
+;;(add-hook 'clojure-mode-hook 'idle-highlight)
 
 (font-lock-add-keywords 'clojure-mode
                         '(("(\\|)" . 'esk-paren-face)))
@@ -55,14 +55,14 @@
 ;;; Scheme
 
 (add-hook 'scheme-mode-hook 'run-coding-hook)
-(add-hook 'scheme-mode-hook 'idle-highlight)
+;;(add-hook 'scheme-mode-hook 'idle-highlight)
 (font-lock-add-keywords 'scheme-mode
 			'(("(\\|)" . 'esk-paren-face)))
 
 ;;; Common Lisp
 
 (add-hook 'lisp-mode-hook 'run-coding-hook)
-(add-hook 'lisp-mode-hook 'idle-highlight)
+;;(add-hook 'lisp-mode-hook 'idle-highlight)
 (font-lock-add-keywords 'lisp-mode
 			'(("(\\|)" . 'esk-paren-face)))
 

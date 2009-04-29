@@ -6,6 +6,7 @@
  '(erc-modules (quote (autojoin button capab-identify completion fill irccontrols keep-place list match menu move-to-prompt netsplit networks noncommands readonly ring scrolltobottom services stamp track highlight-nicknames)))
  '(exec-path (quote ("/Users/blowery/bin" "/usr/local/bin" "/opt/local/bin" "/usr/bin" "/bin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin")))
  '(js2-highlight-level 3)
+ '(tls-program (quote ("openssl s_client -connect %h:%p -no_ssl2 -ign_eof" "openssl s_client -cert ~/.ssh/blowery-joost.pem -connect %h:%p -no_ssl2 -ign_eof")))
  '(weblogger-config-alist (quote (("blowery" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1")) ("default" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1"))))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
