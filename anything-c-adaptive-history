@@ -1,0 +1,3 @@
+;; -*- mode: emacs-lisp -*-
+;; History entries used for anything adaptive display.
+(setq anything-c-adaptive-history (quote ((file ("~/work/joost/mwf/bigbox/app/joost/ui/Queue.js" ("queue" . 1))) (buffer ("joost.org" ("joost" . 1) ("joost.org" . 4))))))

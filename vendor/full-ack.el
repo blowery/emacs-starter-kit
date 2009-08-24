@@ -218,7 +218,7 @@ nil, the directory is never confirmed."
     (java-mode "java")
     (javascript-mode "js")
     (jde-mode "java")
-    (js2-mode "js")
+    (js-mode "js")
     (jsp-mode "jsp")
     (latex-mode "tex")
     (lisp-mode "lisp")

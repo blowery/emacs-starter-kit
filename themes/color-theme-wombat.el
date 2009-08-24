@@ -25,12 +25,12 @@
      (border-glyph ((t (nil))))
      (buffers-tab ((t (:background "#0C1021" :foreground "#F8F8F8"))))
      (font-lock-builtin-face ((t (:foreground "#f6f3e8"))))
-     (font-lock-comment-face ((t (:foreground "#99968b"))))
+     (font-lock-comment-face ((t (:foreground "#99968b" :italic t))))
      (font-lock-constant-face ((t (:foreground "#e5786d"))))
      (font-lock-doc-string-face ((t (:italic t :foreground "#99968b"))))
      (font-lock-function-name-face ((t (:foreground "#cae682"))))
      (font-lock-variable-name-face ((t (:foreground "#8ac6f2"))))
-     (font-lock-keyword-face ((t (:foreground "#8ac6f2"))))
+     (font-lock-keyword-face ((t (:foreground "#8ac6f2" :bold t))))
      (font-lock-preprocessor-face ((t (:foreground "#e5786d"))))
      (font-lock-reference-face ((t (:foreground "SlateBlue"))))
 
@@ -42,9 +42,9 @@
      
      (font-lock-warning-face ((t (:bold t :foreground "yellow"))))
 
-     (js2-error-face ((t (:background "firebrick4"))))
-     (js2-warning-face ((t (:background "gray20"))))
-     (js2-external-variable-face ((t (:foreground "red" :bold t))))
+     (js-error-face ((t (:underline "red" :italic t))))
+     (js-warning-face ((t (:underline "yellow"))))
+     (js-external-variable-face ((t (:foreground "purple" :bold t))))
      
      ;;(gui-element ((t (:background "#D4D0C8" :foreground "black"))))
      (region ((t (:background "#435869"))))

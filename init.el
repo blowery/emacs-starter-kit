@@ -10,8 +10,8 @@
 ;; -Neal Stephenson, "In the Beginning was the Command Line"
 
 ;; Load path etc.
-(if window-system
-    (ns-grabenv "/bin/bash" '("source ~/.bash_profile" "printenv")))
+;;(if window-system
+;;    (ns-grabenv "/bin/bash" '("source ~/.bash_profile" "printenv")))
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
@@ -21,6 +21,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/lisp"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-mode/contrib/lisp"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme-6.6.0"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/magit"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/icicles"))
 (add-to-list 'load-path (concat dotfiles-dir "/themes"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 ;;(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
@@ -79,6 +81,7 @@
 (autoload 'ack-find-file "full-ack" nil t)
 
 (regen-autoloads)
+
 (load custom-file 'noerror)
 
 ;; More complicated packages that haven't made it into ELPA yet
@@ -105,6 +108,6 @@
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;; fire up the server so emacsclient can work
-(server-start)
+;;(server-start)
 
 ;;; init.el ends here

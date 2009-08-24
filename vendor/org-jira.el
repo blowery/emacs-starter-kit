@@ -45,6 +45,7 @@
 ;; v 0.1 - Initial release
 
 (require 'jira)
+(require 'org)
 
 (org-add-link-type "jira" 'org-jira-open)
 
