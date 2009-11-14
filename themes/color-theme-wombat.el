@@ -42,10 +42,13 @@
      
      (font-lock-warning-face ((t (:bold t :foreground "yellow"))))
 
-     (js-error-face ((t (:underline "red" :italic t))))
-     (js-warning-face ((t (:underline "yellow"))))
-     (js-external-variable-face ((t (:foreground "purple" :bold t))))
-     
+     (js2-error-face ((t (:underline "red" :italic t))))
+     (js2-warning-face ((t (:underline "yellow"))))
+     (js2-external-variable-face ((t (:foreground "purple" :bold t))))
+
+     (whitespace-trailing ((t (:background "#221"))))
+     (whitespace-indentation ((t (:background "#221"))))
+          
      ;;(gui-element ((t (:background "#D4D0C8" :foreground "black"))))
      (region ((t (:background "#435869"))))
      (mode-line ((t (:background "#161616" :foreground "white"))))
@@ -53,7 +56,7 @@
      ;;(highline-face ((t (:background "#777777"))))
      (italic ((t (nil))))
      (left-margin ((t (nil))))
-     (show-paren-match ((t (:foreground "goldenrod" :bold t))))
+     (show-paren-match ((t (:foreground "yellow" :bold t))))
      ;;(text-cursor ((t (:background "yellow" :foreground "black"))))
      (toolbar ((t (nil))))
      ;;(underline ((nil (:underline nil))))
