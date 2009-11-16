@@ -22,7 +22,16 @@
 (add-hook 'js-mode-hook 'run-coding-hook)
 (add-hook 'js-mode-hook 'whitespace-mode-on)
 (add-hook 'js-mode-hook 'javascript-mode-keybindings)
+(add-hook 'js-mode-hook 'esk-paredit-nonlisp)
 
+(eval-after-load 'js
+  '(progn (define-key js-mode-map "{" 'paredit-open-brace)
+          (define-key js-mode-map "}" 'paredit-close-brace)
+          ;; fixes problem with pretty function font-lock
+          (define-key js-mode-map (kbd ",") 'self-insert-command)
+          (font-lock-add-keywords 'js-mode
+                        '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
+                           1 font-lock-warning-face t)))))
 
 (defun esk-pp-json ()
   "Pretty-print the json object following point."

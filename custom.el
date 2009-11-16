@@ -22,7 +22,6 @@
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
  '(org-agenda-files (quote ("~/notes/birthdays.org" "~/notes/dojo-docs.org" "~/notes/play.org" "~/notes/remember.org")))
- '(show-paren-mode nil)
  '(tabbar-mode t nil (tabbar))
  '(tls-program (quote ("openssl s_client -connect %h:%p -no_ssl2 -ign_eof" "openssl s_client -cert ~/.ssh/blowery-joost.pem -connect %h:%p -no_ssl2 -ign_eof")))
  '(weblogger-config-alist (quote (("blowery" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1")) ("default" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1"))))))
@@ -32,7 +31,6 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :family "Menlo"))))
- '(emacs-lisp-mode-default ((t (:inherit autoface-default :height 120 :family "Menlo"))) t)
  '(espresso-mode-default ((t (:inherit autoface-default :height 120 :family "Menlo"))) t)
  '(js-mode-default ((t (:inherit autoface-default :height 120 :family "Menlo"))) t)
  '(js2-mode-default ((t (:inherit autoface-default :height 120 :family "Menlo"))) t)
