@@ -46,6 +46,10 @@
 (require 'color-theme-wombat)
 (color-theme-wombat)
 
+;; goofy textmate skeleton pairs replacement
+(require 'textmate)
+(tm/initialize)
+
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
 ;;(load "elpa-to-submit/nxhtml/autostart")
