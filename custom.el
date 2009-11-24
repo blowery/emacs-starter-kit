@@ -20,11 +20,8 @@
  '(magit-git-executable "/opt/local/bin/git")
  '(ns-alternate-modifier (quote meta))
  '(ns-tool-bar-display-mode nil t)
- '(ns-tool-bar-size-mode nil t)
- '(org-agenda-files (quote ("~/notes/birthdays.org" "~/notes/dojo-docs.org" "~/notes/play.org" "~/notes/remember.org")))
- '(tabbar-mode t nil (tabbar))
- '(tls-program (quote ("openssl s_client -connect %h:%p -no_ssl2 -ign_eof" "openssl s_client -cert ~/.ssh/blowery-joost.pem -connect %h:%p -no_ssl2 -ign_eof")))
- '(weblogger-config-alist (quote (("blowery" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1")) ("default" ("user" . "admin") ("server-url" . "http://blowery.org/xmlrpc.php") ("weblog" . "1"))))))
+ '(ns-tool-bar-size-mode nil t))
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
