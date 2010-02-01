@@ -15,7 +15,7 @@
 ;; javascript lint 
 (defun jslint-thisfile ()
   (interactive)
-  (compile (format "~/bin/jsl -process %s" (buffer-file-name))))
+  (compile (format "/usr/local/bin/jsl -process %s" (buffer-file-name))))
 
 (defun javascript-mode-keybindings ()
   (local-set-key [f8] 'jslint-thisfile)

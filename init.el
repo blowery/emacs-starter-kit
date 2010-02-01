@@ -46,9 +46,12 @@
 (require 'color-theme-wombat)
 (color-theme-wombat)
 
+
+(require 'magit)
+
 ;; goofy textmate skeleton pairs replacement
-(require 'textmate)
-(tm/initialize)
+;;(require 'textmate)
+;;(tm/initialize)
 
 ;; this must be loaded before ELPA since it bundles its own
 ;; out-of-date js stuff. TODO: fix it to use ELPA dependencies
@@ -73,16 +76,20 @@
 (require 'starter-kit-js)
 (require 'starter-kit-org)
 
-;(require 'weblogger)
-(require 'eshell-vc)
+(require 'iflipb)
+(global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
+(global-set-key (kbd "<C-S-tab>") 'iflipb-previous-buffer)
+
+;;(require 'weblogger)
+;;(require 'eshell-vc)
 ;(require 'erc)
 ;(require 'erc-highlight-nicknames)
 ;(setq erc-autojoin-channels-alist '("freenode.net" "#emacs" "#bloglines" "#dojo" "#joost"))
 
-(autoload 'ack-same "full-ack" nil t)
-(autoload 'ack "full-ack" nil t)
-(autoload 'ack-find-same-file "full-ack" nil t)
-(autoload 'ack-find-file "full-ack" nil t)
+(autoload 'ack "ack-emacs" nil t)
+
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'ack-mode-hook 'ansi-color-for-comint-mode-on)
 
 (regen-autoloads)
 
@@ -112,6 +119,6 @@
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;; fire up the server so emacsclient can work
-;;(server-start)
+(server-start)
 
 ;;; init.el ends here

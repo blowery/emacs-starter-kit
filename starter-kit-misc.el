@@ -58,11 +58,15 @@
 ;; ido-mode is like magic pixie dust!
 (when (> emacs-major-version 21)
   (ido-mode t)
-  (setq ido-enable-prefix nil
+  (setq ido-everywhere t
+        ido-enable-prefix nil
+        ido-enable-last-directory-history t
+        ido-use-filename-at-point 'ffap-guesser
+        ido-use-url-at-point nil
         ido-enable-flex-matching t
         ido-create-new-buffer 'always
         ido-use-filename-at-point t
-        ido-max-prospects 8))
+        ido-max-prospects 4))
 
 (set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines t)
